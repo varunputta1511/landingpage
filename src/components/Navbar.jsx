@@ -1,10 +1,20 @@
-import logo from "../assets/logo.png";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import { navItems } from "../constants";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import logo from '../assets/logo.png';
+import { Menu, X } from 'lucide-react';
+
+const navItems = [
+  { label: 'Features', href: '#features' },
+  { label: 'Workflow', href: '#workflow' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Courses', href: '/courses' }, // Update href as needed
+  { label: 'Dashboard', href: '/cart' }   // Update href as needed
+];
 
 const Navbar = () => {
-  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false); // Fixed typo
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
@@ -12,16 +22,22 @@ const Navbar = () => {
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      const offset = -85;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY + offset;
+    if (href.startsWith('/')) {
+      // Handle route navigation
+      navigate(href);
+    } else if (href.startsWith('#')) {
+      // Handle internal anchor links with smooth scroll
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        const offset = -85;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY + offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
     }
     setMobileDrawerOpen(false); // Close the mobile drawer on link click
   };
@@ -65,7 +81,7 @@ const Navbar = () => {
                 <li key={index} className="py-4">
                   <a
                     href={item.href}
-                    onClick={(e) => handleLinkClick(e, item.href)} // Smooth scroll for mobile too
+                    onClick={(e) => handleLinkClick(e, item.href)}
                   >
                     {item.label}
                   </a>

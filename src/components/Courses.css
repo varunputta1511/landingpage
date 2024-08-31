@@ -1,0 +1,78 @@
+/* Container for the courses page */
+.courses-page {
+    padding: 20px;
+    background-color: #000; /* Set background color to black */
+    color: #fff; /* Ensure text color is white for better readability on a black background */
+  }
+  
+  /* Flex container for the course cards */
+  .courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    gap: 20px;
+    justify-content: center; /* Center the cards horizontally */
+    margin: 0 auto; /* Center the grid container within its parent */
+    max-width: 1200px; /* Optional: Set a maximum width to avoid overly stretched cards on very large screens */
+  }
+  
+  /* Individual course card styling */
+  .course-card1 {
+    border: 1px solid #333; /* Slightly darker border for better contrast on black background */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #aba2a240;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect to enlarge the card */
+  .course-card1:hover {
+    transform: scale(1.05); /* Slightly increase the card size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow */
+  }
+  
+  /* Styling for course images */
+  .course-image1 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .course-name1 {
+    color:white;
+    text-align: center;
+  }
+  
+  /* Styling for course information text */
+  .course-info {
+    margin: 10px 0;
+    color: white; /* Darker text color for better contrast on white background */
+  }
+  
+  /* Styling for the enroll button */
+  .enroll-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-items: center; /* Smooth transition for hover effect */
+  }
+  
+  /* Button hover effect */
+  .enroll-button:hover {
+    background-color: #e6002e;
+  }
+  
+  /* Responsive grid layout */
+  @media (min-width: 600px) {
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+      grid-template-rows: repeat(2, auto); /* 2 rows */
+    }
+  }
+  
