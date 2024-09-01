@@ -6,7 +6,7 @@ const Pricing = () => {
     <section id="pricing">
     <div className="mt-20">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide">
-        Pricing
+        Apprenticeship 
       </h2>
       <div className="flex flex-wrap">
         {pricingOptions.map((option, index) => (
@@ -36,7 +36,7 @@ const Pricing = () => {
                 href="#"
                 className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200"
               >
-                Subscribe
+                Apply Now
               </a>
             </div>
           </div>

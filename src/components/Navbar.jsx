@@ -5,11 +5,11 @@ import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { label: 'Features', href: '#features' },
-  { label: 'Workflow', href: '#workflow' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Outreach', href: '#workflow' },
+  { label: 'Apprenticeship', href: '#pricing' },
   { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Courses', href: '/courses' }, // Update href as needed
-  { label: 'Dashboard', href: '/cart' }   // Update href as needed
+ // { label: 'Courses', href: '/courses' }, // Update href as needed
+ // { label: 'Dashboard', href: '/cart' }   // Update href as needed
 ];
 
 const Navbar = () => {
