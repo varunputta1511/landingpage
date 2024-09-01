@@ -8,7 +8,10 @@ import Pricing from "./components/Pricing";
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Courses from './components/Courses';
-import Cart from './components/Cart'; // Import the CoursesPage component
+import Cart from './components/Cart'; 
+import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
+
 
 const App = () => {
   return (
@@ -28,6 +31,8 @@ const App = () => {
         } />
         <Route path="/courses" element={<Courses />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage/>} />
         {/* Add other routes here if needed */}
       </Routes>
       <Footer />

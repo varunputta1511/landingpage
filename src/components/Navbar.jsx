@@ -63,8 +63,16 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <button className="py-2 px-3 border rounded-md">Sign In</button>
-            <button className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md">
+            <button
+              onClick={() => navigate('/login')}
+              className="py-2 px-3 border rounded-md"
+            >
+              Sign In
+            </button>
+            <button
+              onClick={() => navigate('/signup')}
+              className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
+            >
               Create an Account
             </button>
           </div>
@@ -89,15 +97,18 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 border rounded-md">
+              <button
+                onClick={() => navigate('/login')}
+                className="py-2 px-3 border rounded-md"
+              >
                 Sign In
-              </a>
-              <a
-                href="#"
+              </button>
+              <button
+                onClick={() => navigate('/signup')}
                 className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
               >
                 Create Account
-              </a>
+              </button>
             </div>
           </div>
         )}
